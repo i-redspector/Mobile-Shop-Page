@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile Shop Page</title>
+    <!-- 1. Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Using a common sans-serif font stack. 
+           "Gotham" is a commercial font; you'd need to license and import it.
+           Tailwind's default `font-sans` (which includes "Inter") is a great alternative.
+        */
+        body {
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+        }
+    </style>
+</head>
+<body class="bg-gray-100">
+
+    <!-- Wrapper to simulate mobile view -->
+    <div class="max-w-md mx-auto bg-white min-h-screen shadow-lg relative pb-20"> <!-- Added padding-bottom for footer -->
+
+        <!-- 1. TOP HEADER (Sticky) -->
+        <header class="sticky top-0 z-20 bg-white/90 backdrop-blur-sm shadow-sm p-3">
+            <div class="flex justify-between items-center">
+                <!-- User can replace "#" with actual links -->
+                <a href="#" class="border border-gray-800 rounded-full px-5 py-1.5 text-sm font-medium">Provider</a>
+                <button id="open-ingredients" class="border border-gray-800 rounded-full px-5 py-1.5 text-sm font-medium">Ingredients</button>
+            </div>
+        </header>
+
+        <!-- MAIN CONTENT -->
+        <main class="p-4 space-y-6">
+
+            <!-- 2. PRODUCT IMAGE/GIF Section -->
+            <section>
+                <!-- Placeholder for GIF/Image -->
+                <div class="w-full h-64 bg-gray-200 border rounded-lg flex items-center justify-center text-gray-500">
+                    Product Image/GIF Placeholder
+                </div>
+                
+                <ul class="list-disc list-inside my-4 text-sm space-y-1 pl-2">
+                    <!-- Placeholder "What You Will Get" items -->
+                    <li>What You will get</li>
+                    <li>B vitamins</li>
+                    <li>Fish oil</li>
+                    <li>Magnesium</li>
+                    <li>Turmeric</li>
+                    <li>Marine Collagen</li>
+                    <li>Amino Acids</li>
+                </ul>
+
+                <div class="flex flex-col space-y-3">
+                    <a href="#" class="w-full bg-gray-800 text-white rounded-full px-5 py-2.5 text-center font-medium">Provider</a>
+                    <a href="#giveaway" class="w-full border border-gray-800 rounded-full px-5 py-2.5 text-center font-medium">Enter Giveaway</a>
+                </div>
+            </section>
+
+            <!-- 3. FEATURES/BENEFITS Section -->
+            <section class="flex flex-wrap gap-2 justify-center">
+                <span class="border border-gray-400 rounded-full px-4 py-1 text-sm">Heart health</span>
+                <span class="border border-gray-400 rounded-full px-4 py-1 text-sm">Immune</span>
+                <span class="border border-gray-400 rounded-full px-4 py-1 text-sm">& More energy</span>
+                <span class="border border-gray-400 rounded-full px-4 py-1 text-sm">Brain</span>
+            </section>
+
+            <!-- 4. VALUE PROP Section -->
+            <section class="text-center space-y-4">
+                <p class="text-lg font-medium">"We are All in One Solution with 84+ ingredients for a reasonable price"</p>
+                <p class="text-xs text-gray-600">"we promote highest quality and no ugly markups"</p>
+                
+                <h3 class="font-semibold pt-4">Some Honest facts about uk supernutrition</h3>
+                
+                <div class="flex gap-4">
+                    <!-- Two columns -->
+                    <div class="w-1/2 border rounded-lg p-3 text-left">
+                        <ul class="list-disc list-inside text-sm space-y-1">
+                            <li>Honest fact 1</li>
+                            <li>Honest fact 2</li>
+                            <li>Honest fact 3</li>
+                            <li>Honest fact 4</li>
+                        </ul>
+                        <a href="#" class="text-blue-600 text-sm mt-3 inline-block">continue &darr;</a>
+                    </div>
+                    <div class="w-1/2 border rounded-lg p-3 text-left">
+                         <ul class="list-disc list-inside text-sm space-y-1">
+                            <li>Honest fact 5</li>
+                            <li>Honest fact 6</li>
+                            <li>Honest fact 7</li>
+                            <li>Honest fact 8</li>
+                        </ul>
+                        <a href="#" class="text-blue-600 text-sm mt-3 inline-block">continue &darr;</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 5. FOUNDER'S NOTE Section -->
+            <section class="text-center">
+                <h3 class="font-semibold">Founder's Note</h3>
+                <p class="text-gray-700 mt-2">
+                    "where my journey started, what helped me, and how long it took. Lorem ipsum dolor sit amet, consectetur adipiscing elit..."
+                </p>
+            </section>
+
+            <!-- 6. "OUR PROGRESS" Section -->
+            <section>
+                 <h3 class="font-semibold text-center mb-2">Our Progress</h3>
+                 <div class="w-full bg-gray-200 rounded-full h-4 border">
+                    <!-- Change w-1/2 to w-3/4, w-full etc. to change progress -->
+                    <div class="bg-blue-600 h-4 rounded-full" style="width: 50%"></div>
+                 </div>
+            </section>
+
+            <!-- 7. GIVEAWAY Section -->
+            <section id="giveaway" class="text-center p-4 border rounded-lg">
+                <h3 class="font-semibold">Enter A Giveaway</h3>
+                <input 
+                    type="email" 
+                    placeholder="Enter Your Best Email" 
+                    class="w-full border border-gray-400 rounded-lg p-3 mt-3 bg-white"
+                >
+                <!-- You can add a submit button here -->
+                <button class="w-full bg-blue-600 text-white rounded-full px-5 py-2.5 text-center font-medium mt-3">Submit</button>
+            </section>
+
+            <!-- 8. FAQ Section -->
+            <section>
+                <h3 class="font-semibold text-center mb-3">Frequently Asked Questions</h3>
+                <div class="space-y-2">
+                    
+                    <!-- FAQ Item 1 -->
+                    <div class="faq-item border rounded-lg">
+                        <div class="faq-toggle flex justify-between items-center p-3 cursor-pointer">
+                            <span class="font-medium">Question 1 about the product?</span>
+                            <span class="text-2xl font-light">+</span>
+                        </div>
+                        <div class="faq-answer hidden p-3 border-t text-gray-700">
+                            This is the answer to question 1. Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 2 -->
+                    <div class="faq-item border rounded-lg">
+                        <div class="faq-toggle flex justify-between items-center p-3 cursor-pointer">
+                            <span class="font-medium">Question 2: What about shipping?</span>
+                            <span class="text-2xl font-light">+</span>
+                        </div>
+                        <div class="faq-answer hidden p-3 border-t text-gray-700">
+                            This is the answer to question 2. We ship within 2-3 business days.
+                        </div>
+                    </div>
+
+                    <!-- FAQ Item 3 -->
+                    <div class="faq-item border rounded-lg">
+                        <div class="faq-toggle flex justify-between items-center p-3 cursor-pointer">
+                            <span class="font-medium">Question 3: Is there a guarantee?</span>
+                            <span class="text-2xl font-light">+</span>
+                        </div>
+                        <div class="faq-answer hidden p-3 border-t text-gray-700">
+                            This is the answer to question 3. Yes, we have a 30-day money-back guarantee.
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </main>
+
+        <!-- 9. BOTTOM FOOTER NAV (Sticky) -->
+        <footer class="sticky bottom-0 z-20 bg-white shadow-inner border-t">
+            <div class="flex justify-around items-center h-16">
+                <!-- 5 Icon Placeholders -->
+                <div class="w-8 h-8 bg-gray-200 border rounded-lg"></div>
+                <div class="w-8 h-8 bg-gray-200 border rounded-lg"></div>
+                <div class="w-8 h-8 bg-gray-200 border rounded-lg"></div>
+                <div class="w-8 h-8 bg-gray-200 border rounded-lg"></div>
+                <div class="w-8 h-8 bg-gray-200 border rounded-lg"></div>
+            </div>
+        </footer>
+
+    </div>
+    
+    <!-- 10. INGREDIENTS POPUP (Modal) -->
+    <!-- Initially hidden -->
+    <div id="ingredients-popup" class="hidden fixed inset-0 z-50 bg-black/50 flex items-center justify-center">
+        
+        <!-- Modal Content -->
+        <div class="bg-white w-full max-w-md h-full flex flex-col">
+            
+            <!-- Modal Header -->
+            <div class="p-3 border-b flex items-center">
+                <button id="close-ingredients" class="px-4 py-1 text-lg">&larr; Back</button>
+                <h2 class="text-lg font-semibold text-center flex-grow">Ingredients</h2>
+            </div>
+            
+            <!-- Scrollable Modal Body -->
+            <div class="flex-grow overflow-y-auto p-4">
+                <h3 class="font-semibold">Nutri Facts</h3>
+                <p class="text-sm text-gray-600 mb-4">Scroll to see all ingredients</p>
+                
+                <!-- Table for ingredients -->
+                <table class="w-full text-left text-sm">
+                    <thead>
+                        <tr class="border-b">
+                            <th class="py-2">Ingredient</th>
+                            <th class="py-2 text-right">Value</th>
+                            <th class="py-2 text-right">% DV</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Placeholder ingredients. Add as many as needed to make it scroll. -->
+                        <tr class="border-b"><td class="py-2">Vitamin A</td><td class="py-2 text-right">1000mg</td><td class="py-2 text-right">100%</td></tr>
+                        <tr class="border-b"><td class="py-2">Vitamin C</td><td class="py-2 text-right">500mg</td><td class="py-2 text-right">550%</td></tr>
+                        <tr class="border-b"><td class="py-2">Vitamin D</td><td class="py-2 text-right">200mg</td><td class="py-2 text-right">100%</td></tr>
+                        <tr class="border-b"><td class="py-2">Vitamin B12</td><td class="py-2 text-right">100mg</td><td class="py-2 text-right">4167%</td></tr>
+                        <tr class="border-b"><td class="py-2">Magnesium</td><td class="py-2 text-right">250mg</td><td class="py-2 text-right">60%</td></tr>
+                        <tr class="border-b"><td class="py-2">Fish Oil</td><td class="py-2 text-right">1000mg</td><td class="py-2 text-right">N/A</td></tr>
+                        <tr class="border-b"><td class="py-2">Marine Collagen</td><td class="py-2 text-right">500mg</td><td class="py-2 text-right">N/A</td></tr>
+                        <tr class="border-b"><td class="py-2">Turmeric</td><td class="py-2 text-right">300mg</td><td class="py-2 text-right">N/A</td></tr>
+                        <tr class="border-b"><td class="py-2">Amino Acids</td><td class="py-2 text-right">1000mg</td><td class="py-2 text-right">N/A</td></tr>
+                        <tr class="border-b"><td class="py-2">Ingredient 10</td><td class="py-2 text-right">100mg</td><td class="py-2 text-right">10%</td></tr>
+                        <tr class="border-b"><td class="py-2">Ingredient 11</td><td class="py-2 text-right">100mg</td><td class="py-2 text-right">10%</td></tr>
+                        <tr class="border-b"><td class="py-2">Ingredient 12</td><td class="py-2 text-right">100mg</td><td class="py-2 text-right">10%</td></tr>
+                        <tr class="border-b"><td class="py-2">Ingredient 13</td><td class="py-2 text-right">100mg</td><td class="py-2 text-right">10%</td></tr>
+                        <tr class="border-b"><td class="py-2">Ingredient 14</td><td class="py-2 text-right">100mg</td><td class="py-2 text-right">10%</td></tr>
+                        <tr class="border-b"><td class="py-2">Ingredient 15</td><td class="py-2 text-right">100mg</td><td class="py-2 text-right">10%</td></tr>
+                        <tr class="border-b"><td class="py-2">Ingredient 16</td><td class="py-2 text-right">100mg</td><td class="py-2 text-right">10%</td></tr>
+                        <tr class="border-b"><td class="py-2">Ingredient 17</td><td class="py-2 text-right">100mg</td><td class="py-2 text-right">10%</td></tr>
+                        <tr class="border-b"><td class="py-2">Ingredient 18</td><td class="py-2 text-right">100mg</td><td class="py-2 text-right">10%</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- JAVASCRIPT for functionality -->
+    <script>
+        // --- 1. POPUP SCRIPT ---
+        const openButton = document.getElementById('open-ingredients');
+        const closeButton = document.getElementById('close-ingredients');
+        const popup = document.getElementById('ingredients-popup');
+
+        openButton.addEventListener('click', () => {
+            popup.classList.remove('hidden');
+        });
+
+        closeButton.addEventListener('click', () => {
+            popup.classList.add('hidden');
+        });
+
+        // --- 2. FAQ ACCORDION SCRIPT ---
+        const faqToggles = document.querySelectorAll('.faq-toggle');
+
+        faqToggles.forEach(toggle => {
+            toggle.addEventListener('click', () => {
+                // Get the answer element, which is the next sibling
+                const answer = toggle.nextElementSibling;
+                // Toggle the 'hidden' class on the answer
+                answer.classList.toggle('hidden');
+
+                // Optional: Change '+' to '-'
+                const icon = toggle.querySelector('span:last-child');
+                if (answer.classList.contains('hidden')) {
+                    icon.textContent = '+';
+                } else {
+                    icon.textContent = '−'; // Using a minus sign
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>
